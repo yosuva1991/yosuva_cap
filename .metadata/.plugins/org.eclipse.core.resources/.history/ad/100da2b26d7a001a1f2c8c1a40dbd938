@@ -1,0 +1,16 @@
+
+public class Pangram {
+
+	public static void main(String[] args) {
+		
+		
+
+	}
+	
+	
+	private static Boolean isTextPangram(String input) {
+		
+		return false;
+	}
+
+}

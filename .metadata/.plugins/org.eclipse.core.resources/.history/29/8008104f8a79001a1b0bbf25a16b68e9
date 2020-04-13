@@ -1,0 +1,50 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+
+
+class Result {
+
+    /*
+     * Complete the 'lotteryCoupons' function below.
+     *
+     * The function is expected to return an INTEGER.
+     * The function accepts INTEGER n as parameter.
+     */
+
+    public static int lotteryCoupons(int n) {
+    	     HashMap<Integer, Integer> resultMap = new HashMap<Integer, Integer>();
+    	     Integer existingCount = resultMap.get(0);
+    	     System.out.println("sum--->"+existingCount);
+             int sum = 0,s=0,m;
+             for(int i=1;i<=n;i++) {
+            	 
+            	 while(n > 0)
+                 {
+                     m = n % 10;
+                     sum = sum + m;
+                     n = n / 10;
+                 }
+            	 //Integer existingCount = resultMap.get(sum);
+            	 
+             }
+        
+          return s;
+    }
+
+}
+
+public class MainClass {
+    public static void main(String[] args) throws IOException {
+    	Result.lotteryCoupons(10);
+    }
+}

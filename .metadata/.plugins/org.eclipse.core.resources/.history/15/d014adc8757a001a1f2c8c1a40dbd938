@@ -1,0 +1,23 @@
+package Task1;
+
+import java.util.List;
+
+public class PrimeFraction {
+	
+	
+	private static List getPrimeFractionList(int number) {
+		
+		int limit = number/2;
+		for(int i=2;i<=limit;i++) {
+			
+		}
+		
+		return null;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

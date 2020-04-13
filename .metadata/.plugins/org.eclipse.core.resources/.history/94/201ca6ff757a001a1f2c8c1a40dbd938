@@ -1,0 +1,41 @@
+package Task1;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class PrimeFraction {
+	
+	
+	private static List getPrimeFractionList(int number) {
+		List<Integer> resultList = new ArrayList<Integer>();
+		int limit = number/2;
+		for(int i=2;i<=limit;i++) {
+			Boolean flag = false;
+			int fraction = number/i;
+			int innerLimit = fraction/2;
+			for(int j=2;j<=innerLimit;j++) {
+				if(fraction%j==0) {
+					flag = true;
+					limit = innerLimit;
+					i = j;
+					break;
+				}
+			}
+			if(flag) {
+				continue;
+			}else {
+				resultList.add(fraction);
+			}
+			
+			
+		}
+		
+		return null;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

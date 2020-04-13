@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Pangram {
+
+	public static void main(String[] args) {
+		
+		
+
+	}
+	
+	
+	private static Boolean isTextPangram(String input) {
+		input = input.toLowerCase();
+		char[] charArray = input.toCharArray();
+		List<Character> resultList = new ArrayList<Character>();
+		for(int i=0;i<charArray.length;i++) {
+			if(Character.isLetter(charArray[i])) {
+				if(! resultList.contains(charArray[i])) {
+					resultList.add(charArray[i]);
+				}
+			}
+		}
+		if(resultList.size() == 26) {
+			return true;
+		}
+		return false;
+	}
+
+}

@@ -1,0 +1,32 @@
+package task;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class ShortestSubString {
+	
+	public static int shortestSubstring(String s) {
+		
+		List<String> letters = Arrays.asList(s.split(""));
+		List<String> uniqueLetters = letters.stream().distinct().collect(Collectors.toList());
+		List<String> subStringList = new ArrayList<String>();
+		int length = letters.size();
+		for(int i=0;i<letters.size();i++) {
+			subStringList.add(letters.get(i));
+			if(uniqueLetters.containsAll(subStringList)) {
+				if(subStringList.size()<length) {
+					length = subStringList.size();
+				}
+			}
+		}
+		return length;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
